@@ -9,5 +9,8 @@ Run "gradle clean eclipse" if you face any dependencies issues with tomcat-jaspe
 
 --Run the application and access on browser 
 	
-	http://localhost:8080/first-req
+	i) http://localhost:8080/sample-req?input=SpringMVC
+	
+	ii) http://localhost:8080/product/show-product-details?pId=Moto1Pwr&pName=MotoOnePower&description=motorolaonepowermobile&price=15000
+	
 	

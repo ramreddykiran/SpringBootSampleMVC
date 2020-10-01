@@ -2,23 +2,19 @@ package com.boot.spring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.boot.spring.domain.Product;
-
 @Controller
-@RequestMapping("product")
-public class ProductController {
-
-	@RequestMapping("/show-product-details")
-	public ModelAndView showProduct(Product product) {
+@RequestMapping("sample-req")
+public class SampleController {
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView handleInput(@RequestParam("input") String inputValue) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("p", product);
-		mv.setViewName("product-display");
+		mv.addObject("input", inputValue);
+		mv.setViewName("welcome");
 		return mv;
 	}
-	
-	
-
 }
